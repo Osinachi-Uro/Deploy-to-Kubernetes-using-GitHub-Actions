@@ -46,6 +46,7 @@ jobs:
     #     docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
     #     docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
 
+    # Log into DO and install doctl
     - name: Install doctl
       uses: digitalocean/action-doctl@v2
       with:

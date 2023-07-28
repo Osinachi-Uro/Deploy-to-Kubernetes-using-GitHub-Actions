@@ -46,15 +46,15 @@ jobs:
         docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
         docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
 
-    - name: Install doctl
-      uses: digitalocean/action-doctl
-      with:
-        token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+    # - name: Install doctl
+    #   uses: digitalocean/action-doctl
+    #   with:
+    #     token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
-    - name: Save DigitalOcean kubeconfig
-      run: doctl kubernetes cluster kubeconfig save actions
+    # - name: Save DigitalOcean kubeconfig
+    #   run: doctl kubernetes cluster kubeconfig save actions
 
-    - name: Deploy to DOKS
-      run: |
-        kubectl apply -f deployment.yaml
-        kubectl apply -f service.yaml
+    # - name: Deploy to DOKS
+    #   run: |
+    #     kubectl apply -f deployment.yaml
+    #     kubectl apply -f service.yaml

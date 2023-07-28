@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: osinachiprofile-app
+  name: web-app
   labels:
-    name: osinachiprofile-app-service
+    name: web-app-service
     app: website
 spec:
   type: LoadBalancer
@@ -11,5 +11,5 @@ spec:
     - port: 80
       targetPort: 80
   selector:
-    name: osinachiprofile-app-pod
+    name: web-app-pod
     app: website

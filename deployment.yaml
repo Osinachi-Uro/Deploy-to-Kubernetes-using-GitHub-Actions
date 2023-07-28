@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
         - name: web-app
-          image: 213749874755.dkr.ecr.eu-west-1.amazonaws.com/osinachiprofile:1.1
+          image: public.ecr.aws/c9r2v0m2/osinachiprofile:1.1
           ports:
             - containerPort: 80

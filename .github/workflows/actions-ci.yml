@@ -59,5 +59,3 @@ jobs:
       run: |
         kubectl apply -f deployment.yaml
         kubectl apply -f service.yaml
-        kubectl patch svc service.yaml -p '{"spec":{"externalTrafficPolicy":"actions"}}'
-

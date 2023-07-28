@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: profile-app-deploy
+  labels:
+    name: osinachiprofile
+    app: website
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: osinachiprofile-pod
+      app: website
+  template:
+    metadata:
+      name: osinachiprofile-app-pod
+      labels:
+        name: osinachiprofile-app-pod
+        app: website
+    spec:
+      containers:
+        - name: osinachiprofile
+          image: 213749874755.dkr.ecr.eu-west-1.amazonaws.com/osinachiprofile:1.1
+          ports:
+            - containerPort: 80

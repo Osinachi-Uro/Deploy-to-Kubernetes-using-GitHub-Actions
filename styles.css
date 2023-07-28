@@ -1,0 +1,185 @@
+
+/* 
+Project Name: Personal Profile
+Client: Self
+Author: Osinachi Ibiam-Uro | @osinachi_ibiam
+*/
+
+
+/*----------------------------------------------------------------------------- 
+01=BASE   
+-----------------------------------------------------------------------------*/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+
+body {
+  background-image: url('images/background_img.jpg'); /* add a fallback color of #d6d6d6 */
+  color: #000000;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.7; /* line-height is unit-less */
+  font-size: 100%;
+}
+
+.clearfix {
+	clear: both;
+}
+
+header {
+  width: 900px;
+  margin: 50px auto;
+  text-align: center;
+  letter-spacing: 2px; 
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: gray;
+  overflow: hidden;
+
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+
+/* Container Style */
+.container {  
+  width: 1000px;
+  margin: 50px auto;  
+}
+
+/* Intro Style */
+
+section.intro {
+  background-color: antiquewhite;
+  height: 550px;
+}
+
+aside.left {
+  float: left;
+}
+
+.my-photo {  
+  border-radius: 150%;
+  padding-left: 10px;
+}
+
+p.right {
+  float: right;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 30px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  height: 500px;
+  text-align: center;
+  color: grey;
+  letter-spacing: 1.5px
+}
+
+a.articles {
+  text-decoration: none;
+}
+
+section.certifications {
+  
+  height: auto;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 50px;
+  color: grey;
+}
+
+section.devops_projects {
+  background-color: antiquewhite;
+  height: 210px;
+  margin-top: 50px;
+  text-align: center;
+  color: grey;
+}
+
+/* Frontend Style */
+section.frontend_projects {
+  background-color: antiquewhite;
+  height: 280px;
+  margin-top: 50px;
+  text-align: center;
+  color: grey;
+}
+
+
+/* Contact Style */
+section.contact {
+  background-color: antiquewhite;
+  height: 420px;
+  margin-top: 50px;
+  text-align: center;
+  color: grey;
+}
+
+/* Link Style */
+.link {
+  text-decoration: none;
+}
+
+/* Social Style */
+.social {
+  height: 100px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}

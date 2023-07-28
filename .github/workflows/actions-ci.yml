@@ -37,24 +37,24 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
 
-    - name: Build, tag, and push docker image to Amazon ECR
-      env:
-        REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        REPOSITORY: osinachiprofile
-        IMAGE_TAG: 1.1
-      run: |
-        docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
-        docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
-
-    # - name: Install doctl
-    #   uses: digitalocean/action-doctl
-    #   with:
-    #     token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-
-    # - name: Save DigitalOcean kubeconfig
-    #   run: doctl kubernetes cluster kubeconfig save actions
-
-    # - name: Deploy to DOKS
+    # - name: Build, tag, and push docker image to Amazon ECR
+    #   env:
+    #     REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+    #     REPOSITORY: osinachiprofile
+    #     IMAGE_TAG: 1.1
     #   run: |
-    #     kubectl apply -f deployment.yaml
-    #     kubectl apply -f service.yaml
+    #     docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+    #     docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+
+    - name: Install doctl
+      uses: digitalocean/action-doctl@v2
+      with:
+        token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+    - name: Save DigitalOcean kubeconfig
+      run: doctl kubernetes cluster kubeconfig save actions
+
+    - name: Deploy to DOKS
+      run: |
+        kubectl apply -f deployment.yaml
+        kubectl apply -f service.yaml

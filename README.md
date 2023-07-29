@@ -46,3 +46,4 @@ This repository contains my personal profile website files.
 
 * https://www.youtube.com/watch?v=9qSmFWwsxwA
 * https://medium.com/@danieltse/pull-the-docker-image-from-aws-ecr-in-kubernetes-dc7280d74904
+* https://skryvets.com/blog/2021/03/15/kubernetes-pull-image-from-private-ecr-registry/

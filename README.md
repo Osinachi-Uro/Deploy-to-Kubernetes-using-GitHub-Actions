@@ -22,6 +22,20 @@ This repository contains my personal profile website files.
 4. Created a repository on AWS ECR
 <img width="478" alt="Image repo" src="https://github.com/Osinachi-Uro/Deploy-to-Kubernetes-using-GitHub-Actions/assets/83463641/ef8fc29d-7135-4f7e-bca4-56391e022be2">
 
+5. Pushed the project folder to GitHub and triggered GitHub Action and the build was [successful](https://github.com/Osinachi-Uro/Deploy-to-Kubernetes-using-GitHub-Actions/actions)
+
+<img width="677" alt="final build status" src="https://github.com/Osinachi-Uro/Deploy-to-Kubernetes-using-GitHub-Actions/assets/83463641/11c6b4c2-2055-4681-82b9-57b5063dfd48">
+
+<img width="439" alt="build succeeded" src="https://github.com/Osinachi-Uro/Deploy-to-Kubernetes-using-GitHub-Actions/assets/83463641/aa094bb8-56a3-41bb-b351-3117d4b07e91">
+
+6. Checked pods and tested the Load Balancer address
+<img width="763" alt="pods running" src="https://github.com/Osinachi-Uro/Deploy-to-Kubernetes-using-GitHub-Actions/assets/83463641/089a3951-fd5c-4b7c-ab4d-1844af8a8a9e">
+
+<img width="787" alt="Nodes Accepting traffic" src="https://github.com/Osinachi-Uro/Deploy-to-Kubernetes-using-GitHub-Actions/assets/83463641/61ba911c-925f-4eed-86ea-a9d6c2962a07">
+
+* Web Page displayed
+<img width="936" alt="Web-App Up and running" src="https://github.com/Osinachi-Uro/Deploy-to-Kubernetes-using-GitHub-Actions/assets/83463641/d2fb824d-ae00-4ba1-8473-73280e1e239c">
+
 
 # Some Errors Faced
 

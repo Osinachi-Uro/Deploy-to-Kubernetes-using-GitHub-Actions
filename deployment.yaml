@@ -20,7 +20,9 @@ spec:
     spec:
       containers:
         - name: web-app
-          image: 213749874755.dkr.ecr.eu-west-1.amazonaws.com/osinachiprofile:1.1
+          image: 213749874755.dkr.ecr.us-east-1.amazonaws.com/osinachiprofile:1.1
           imagePullPolicy: Always
           ports:
             - containerPort: 80
+      imagePullSecrets:
+          - name: regcred

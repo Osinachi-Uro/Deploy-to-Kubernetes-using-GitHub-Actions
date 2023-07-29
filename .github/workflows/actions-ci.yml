@@ -30,7 +30,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: eu-west-1
+        aws-region: us-east-1
 
     # Login into ECR
     - name: Login to Amazon ECR
@@ -57,5 +57,12 @@ jobs:
 
     - name: Deploy to DOKS
       run: |
+        NAMESPACE_NAME="health-check" && \
+        kubectl create namespace $NAMESPACE_NAME || true && \
+        kubectl create secret docker-registry regcred \
+          --docker-server=213749874755.dkr.ecr.us-east-1.amazonaws.com/osinachiprofile \
+          --docker-username=AWS \
+          --docker-password=$(aws ecr get-login-password) \
+          --namespace=$NAMESPACE_NAME || true && \
         kubectl apply -f deployment.yaml
         kubectl apply -f service.yaml

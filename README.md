@@ -1,9 +1,13 @@
-# Steps I followed to Deploy a Simple Web Application using GitHub Actions
+# Deploy a Simple Web Application using GitHub Actions
 
-## DevOps Tools & Platforms: Terraform, AWS, Digital Ocean, Docker, GitHub Actions
+## DevOps Tools & Platforms: 
+* Terraform,
+* AWS,
+* Digital Ocean,
+* Docker,
+* GitHub Actions.
 
-This repository contains my personal profile website files.
-# Steps
+## Steps
 1. Used [Terraform](https://github.com/Osinachi-Uro/Deploy-to-Kubernetes-using-GitHub-Actions/tree/main/Terraform) to deploy a Managed Kubernetes Cluster on Digital Ocean.
 
 <img width="838" alt="terraform creating DOKS" src="https://github.com/Osinachi-Uro/Deploy-to-Kubernetes-using-GitHub-Actions/assets/83463641/d98f0ad6-df30-47f6-b99c-614ea6028740">
